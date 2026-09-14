@@ -6,24 +6,19 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Mi Perfil'),
-      ),
-      body: Padding(
-        padding: EdgeInsets.all(16),
-        child: Column(
-          children: [
-            CircleAvatar(
-              child: Icon(Icons.person, size: 50)
-            ),
-            SizedBox(height: 12),
-            Text(
-              'Nombre del Usuario',
-              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-            ),
-          ],
-        ),
-      ),
+      appBar: AppBar(title: Text('Mi Perfil')),
+      body: Center(
+      child:
+        Column(
+        children: [
+          ElevatedButton(
+            onPressed: () => Navigator.pop(context),
+            child: Text('Volver?'),
+          ),
+        ],
+      )
+      )
+      ,
     );
   }
 }
